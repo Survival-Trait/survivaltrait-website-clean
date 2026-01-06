@@ -1,78 +1,30 @@
 # Security Policy
 
-## Supported Versions
+## Reporting Vulnerabilities
 
-We take security seriously and actively maintain security for the latest version of the SurvivalTrait website.
+Email: info@survivaltrait.com
 
-| Version | Supported          |
-| ------- | ------------------ |
-| Latest  | :white_check_mark: |
-| < Latest| :x:                |
+**DO NOT** create public GitHub issues for security vulnerabilities.
 
-## Reporting a Vulnerability
+## Response Time
 
-If you discover a security vulnerability in the SurvivalTrait website, please report it responsibly:
+- Acknowledgment: Within 48 hours
+- Critical issues: 1-7 days
+- High issues: 7-30 days
+- Medium issues: 30-90 days
 
-### How to Report
+## Security Features
 
-1. **DO NOT** create a public GitHub issue
-2. Email security details to: **info@survivaltrait.com**
-3. Include:
-   - Description of the vulnerability
-   - Steps to reproduce
-   - Potential impact
-   - Suggested fix (if any)
+This repository implements:
+- ✅ SAST (Semgrep)
+- ✅ DAST (OWASP ZAP)
+- ✅ SCA (Trivy)
+- ✅ Secret Scanning (TruffleHog)
+- ✅ Automated dependency updates (Dependabot)
 
-### What to Expect
+## Contact
 
-- **Acknowledgment**: Within 48 hours
-- **Initial Assessment**: Within 5 business days
-- **Resolution Timeline**: Varies by severity
-  - Critical: 1-7 days
-  - High: 7-30 days
-  - Medium: 30-90 days
-  - Low: Best effort basis
-
-### Disclosure Policy
-
-- We follow coordinated disclosure practices
-- We will credit researchers (unless anonymity is preferred)
-- We will publish security advisories for significant issues
-
-## Security Best Practices
-
-This project follows these security principles:
-
-### Development
-- All code changes require PR review
-- Automated security scanning on every commit
-- SAST, DAST, and SCA integrated in CI/CD
-- No secrets or credentials in code
-- Regular dependency updates
-
-### Infrastructure
-- HTTPS enforced
-- Security headers implemented
-- Regular security audits
-- Principle of least privilege
-
-### Data Protection
-- No PII stored without explicit consent
-- Privacy policy clearly documented
-- Compliance with applicable regulations
-
-## Security Tools Used
-
-- **SAST**: Semgrep
-- **DAST**: OWASP ZAP
-- **SCA**: Trivy
-- **Secret Scanning**: TruffleHog
-- **Dependency Management**: Dependabot
-
-## Security Contact
-
-For security concerns: **info@survivaltrait.com**
+info@survivaltrait.com
 
 ---
-
-*Last Updated: December 2025*
+*Last Updated: January 2026*
