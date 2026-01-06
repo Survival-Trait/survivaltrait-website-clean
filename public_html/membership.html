@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Premium Membership | Matthew P. Jennings</title>
+    <link rel="stylesheet" href="css/style.css">
+    <style>
+        .pricing-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+            gap: 30px;
+            max-width: 1000px;
+            margin: 0 auto;
+        }
+        
+        .pricing-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px;
+            text-align: center;
+            box-shadow: 0 10px 40px rgba(0,0,0,0.1);
+            transition: transform 0.3s;
+            position: relative;
+        }
+        
+        .pricing-card:hover {
+            transform: translateY(-10px);
+        }
+        
+        .pricing-card.featured {
+            border: 3px solid var(--secondary);
+            transform: scale(1.05);
+        }
+        
+        .pricing-badge {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: var(--accent);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 12px;
+            font-weight: bold;
+        }
+        
+        .pricing-card h3 {
+            font-size: 28px;
+            margin-bottom: 10px;
+            color: var(--primary);
+        }
+        
+        .pricing-price {
+            font-size: 48px;
+            font-weight: bold;
+            color: var(--secondary);
+            margin: 20px 0;
+        }
+        
+        .pricing-price span {
+            font-size: 24px;
+            color: var(--gray);
+        }
+        
+        .pricing-features {
+            list-style: none;
+            margin: 30px 0;
+            text-align: left;
+        }
+        
+        .pricing-features li {
+            padding: 12px 0;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .pricing-features li:before {
+            content: '✓ ';
+            color: var(--success);
+            font-weight: bold;
+            margin-right: 10px;
+        }
+        
+        .comparison-table {
+            background: white;
+            border-radius: 8px;
+            overflow: hidden;
+            box-shadow: 0 4px 15px rgba(0,0,0,0.08);
+            margin-top: 60px;
+        }
+        
+        .comparison-table table {
+            width: 100%;
+            border-collapse: collapse;
+        }
+        
+        .comparison-table th {
+            background: var(--primary);
+            color: white;
+            padding: 20px;
+            text-align: left;
+        }
+        
+        .comparison-table td {
+            padding: 15px 20px;
+            border-bottom: 1px solid var(--border);
+        }
+        
+        .comparison-table tr:hover {
+            background: var(--bg-light);
+        }
+    </style>
+</head>
+<body>
+    
+    <header class="site-header">
+        <div class="container">
+            <nav class="nav-wrapper">
+                <a href="index.html" class="logo">Matthew P. Jennings</a>
+                <div class="main-nav">
+                    <ul>
+                        <li><a href="index.html#about">About</a></li>
+                        <li><a href="index.html#speaking">Speaking</a></li>
+                        <li><a href="videos.html">Videos</a></li>
+                        <li><a href="index.html#newsletter">Newsletter</a></li>
+                        <li><a href="index.html#contact">Contact</a></li>
+                        <li><a href="login.html" class="btn btn-secondary" style="padding: 8px 20px;">Login</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <section class="section">
+        <div class="container">
+            <div class="section-header">
+                <h1>Premium Membership</h1>
+                <p>Access exclusive content, deep-dive courses, and advanced cybersecurity training</p>
+            </div>
+            
+            <div class="pricing-grid">
+                <!-- Free Tier -->
+                <div class="pricing-card">
+                    <h3>Free</h3>
+                    <div class="pricing-price">$0<span>/forever</span></div>
+                    <p>Great for getting started</p>
+                    <ul class="pricing-features">
+                        <li>20-30 minute training videos</li>
+                        <li>Weekly newsletter</li>
+                        <li>Basic cybersecurity resources</li>
+                        <li>Community forum access</li>
+                    </ul>
+                    <a href="signup.php" class="btn btn-secondary" style="width: 100%;">Sign Up Free</a>
+                </div>
+                
+                <!-- Standard Tier -->
+                <div class="pricing-card featured">
+                    <span class="pricing-badge">MOST POPULAR</span>
+                    <h3>Standard</h3>
+                    <div class="pricing-price">$10<span>/month</span></div>
+                    <p style="margin-bottom: 10px;"><strong>or $99/year (save $21)</strong></p>
+                    <p>For serious learners</p>
+                    <ul class="pricing-features">
+                        <li>Everything in Free</li>
+                        <li>All premium long-form courses</li>
+                        <li>Downloadable resources</li>
+                        <li>Certificate of completion</li>
+                        <li>Priority email support</li>
+                        <li>New content weekly</li>
+                    </ul>
+                    <a href="checkout.php?plan=standard_monthly" class="btn btn-primary" style="width: 100%;">Start Standard</a>
+                </div>
+                
+                <!-- Premium Tier -->
+                <div class="pricing-card">
+                    <h3>Premium</h3>
+                    <div class="pricing-price">$20<span>/month</span></div>
+                    <p style="margin-bottom: 10px;"><strong>or $199/year (save $41)</strong></p>
+                    <p>For professionals</p>
+                    <ul class="pricing-features">
+                        <li>Everything in Standard</li>
+                        <li>Exclusive masterclass series</li>
+                        <li>1-on-1 Q&A sessions (quarterly)</li>
+                        <li>Advanced frameworks & templates</li>
+                        <li>Early access to new content</li>
+                        <li>Professional certification prep</li>
+                        <li>Lifetime access to recordings</li>
+                    </ul>
+                    <a href="checkout.php?plan=premium_monthly" class="btn btn-primary" style="width: 100%;">Start Premium</a>
+                </div>
+            </div>
+            
+            <!-- Feature Comparison -->
+            <div class="comparison-table">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>Feature</th>
+                            <th>Free</th>
+                            <th>Standard</th>
+                            <th>Premium</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Short-form videos (20-30 min)</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>Weekly newsletter</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>Long-form premium courses</td>
+                            <td>-</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>Downloadable resources</td>
+                            <td>-</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>Certificates of completion</td>
+                            <td>-</td>
+                            <td>✓</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>Number of courses</td>
+                            <td>Basic library</td>
+                            <td>Full library</td>
+                            <td>Full library + exclusive</td>
+                        </tr>
+                        <tr>
+                            <td>1-on-1 Q&A sessions</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>✓ Quarterly</td>
+                        </tr>
+                        <tr>
+                            <td>Advanced frameworks</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>✓</td>
+                        </tr>
+                        <tr>
+                            <td>Early content access</td>
+                            <td>-</td>
+                            <td>-</td>
+                            <td>✓</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <!-- FAQ -->
+            <div style="max-width: 800px; margin: 60px auto;">
+                <h2 style="text-align: center; margin-bottom: 40px;">Frequently Asked Questions</h2>
+                
+                <div style="background: white; padding: 30px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <h3>Can I cancel anytime?</h3>
+                    <p>Yes! Cancel your subscription at any time. You'll retain access until the end of your billing period.</p>
+                </div>
+                
+                <div style="background: white; padding: 30px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <h3>Do you offer refunds?</h3>
+                    <p>Yes, we offer a 30-day money-back guarantee. If you're not satisfied, email us for a full refund.</p>
+                </div>
+                
+                <div style="background: white; padding: 30px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <h3>Can I upgrade or downgrade?</h3>
+                    <p>Absolutely! Change your plan anytime from your account dashboard. Changes take effect immediately.</p>
+                </div>
+                
+                <div style="background: white; padding: 30px; border-radius: 8px; margin-bottom: 20px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <h3>Do I get continuing education credits?</h3>
+                    <p>Many of our courses qualify for CPE credits. Premium members receive certificates of completion for all courses.</p>
+                </div>
+                
+                <div style="background: white; padding: 30px; border-radius: 8px; box-shadow: 0 4px 15px rgba(0,0,0,0.08);">
+                    <h3>How many videos are added per year?</h3>
+                    <p>We add 50-100 new videos annually, with new content released weekly. Premium members get early access.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-bottom">
+                <p>&copy; 2024 Matthew P. Jennings. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>

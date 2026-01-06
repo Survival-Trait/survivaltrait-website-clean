@@ -1,0 +1,249 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Threat Modeling Before Frameworks">
+    <meta name="keywords" content="cybersecurity, threat modeling, risk, security mindset">
+    <title>Threat Modeling Before Frameworks | Field Notes | Matthew P. Jennings</title>
+    
+    <!-- Favicons -->
+    <link rel="icon" type="image/x-icon" href="../favicon.ico">
+    <link rel="icon" type="image/png" sizes="32x32" href="../favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="../favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="../apple-touch-icon.png">
+    
+    <link rel="stylesheet" href="../css/style.css">
+    <style>
+        /* Essay-specific styles */
+        .essay-container {
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 60px 20px 80px;
+        }
+        
+        .essay-header {
+            margin-bottom: 40px;
+            padding-bottom: 30px;
+            border-bottom: 2px solid var(--border);
+        }
+        
+        .essay-header h1 {
+            font-size: 40px;
+            font-weight: bold;
+            color: var(--primary);
+            margin-bottom: 15px;
+            line-height: 1.3;
+        }
+        
+        .essay-date {
+            font-size: 14px;
+            color: var(--gray);
+            font-style: italic;
+        }
+        
+        .essay-content {
+            font-size: 18px;
+            line-height: 1.8;
+            color: var(--dark);
+        }
+        
+        .essay-footer {
+            margin-top: 60px;
+            padding-top: 30px;
+            border-top: 2px solid var(--border);
+        }
+        
+        .back-link {
+            display: inline-block;
+            color: var(--secondary);
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 16px;
+            transition: color 0.2s;
+        }
+        
+        .back-link:hover {
+            color: var(--primary);
+        }
+        
+        .back-link::before {
+            content: "← ";
+        }
+    </style>
+</head>
+<body>
+    
+    <!-- Header -->
+    <header class="site-header">
+        <div class="container">
+            <nav class="nav-wrapper">
+                <a href="../index.html" class="logo">Matthew P. Jennings</a>
+                <div class="main-nav">
+                    <ul>
+                        <li><a href="../index.html#about">About</a></li>
+                        <li><a href="../field-notes.html">Field Notes</a></li>
+                        <li><a href="../index.html#speaking">Speaking</a></li>
+                        <li><a href="../index.html#videos">Videos</a></li>
+                        <li><a href="../index.html#newsletter">Newsletter</a></li>
+                        <li><a href="../index.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Essay Content -->
+    <main class="essay-container">
+        
+        <!-- Essay Header -->
+        <header class="essay-header">
+            <h1>Threat Modeling Before Frameworks</h1>
+            <div class="essay-date">December 2025</div>
+        </header>
+        
+        <!-- Essay Body -->
+        <div class="essay-content">
+            
+            <p>Threat modeling is often taught as a process.</p>
+            <br>
+            <p>Start with a diagram.</p>
+            <p>Identify assets.</p>
+            <p>Apply a framework.</p>
+            <p>Generate a list of risks.</p>
+            <br>
+            <p>None of that is wrong.</p>
+            <br>
+            <p>But it skips the most important part.</p>
+            <br>
+            <p>Threat modeling does not begin with tools or templates. It begins with <em>thinking</em>. Long before anyone opens a worksheet or draws a diagram, assumptions have already been made about how a system works, who uses it, and what could go wrong.</p>
+            <br>
+            <p>Attackers do not need to defeat frameworks. They only need to find the assumptions hiding underneath them.</p>
+            <br>
+            <p>Every system is built on assumptions, whether they are documented or not.</p>
+            <br>
+            <p>Some assumptions are technical.</p>
+            <br>
+            <p>"This service account will only be used by this application."</p>
+            <p>"This integration only sends expected data."</p>
+            <p>"This system is isolated from the rest of the environment."</p>
+            <br>
+            <p>Others are organizational.</p>
+            <br>
+            <p>"Only trusted people have access."</p>
+            <p>"This process is reviewed regularly."</p>
+            <p>"Someone would notice if this changed."</p>
+            <br>
+            <p>Most of the time, these assumptions are never written down. They live in conversations, institutional memory, or simply in the phrase “that should be fine.”</p>
+            <br>
+            <p>Threat modeling, at its core, is the practice of surfacing those assumptions and asking a simple question: what happens if they are <em>wrong?</em></p>
+            <br>
+            <p>In real incidents, security failures rarely start with sophisticated attacks.</p>
+            <br>
+            <p>They start with <strong>neglect.</strong></p>
+            <br>
+            <p>A shared mailbox no one owns anymore.</p>
+            <p>Temporary access that became permanent.</p>
+            <p>An old integration that's long since been forgotten about.</p>
+            <p>A manual process everyone assumes someone else checks.</p>
+            <br>
+            <p>These are not edge cases. They are normal byproducts of how organizations operate over time.</p>
+            <br>
+            <p>Attackers succeed not because they're brilliant (I mean--if they were, they'd be doing something else with their time, right?), but because they are <em>patient</em>. They look for the places where attention has faded and assumptions have calcified.</p>
+            <br>
+            <p>Threat modeling works when it forces attention back onto those forgotten corners.</p>
+            <br>
+            <p>There is a tendency to imagine attackers as highly skilled adversaries exploiting exotic vulnerabilities.</p>
+            <br>
+            <p>In practice, most attackers behave like economists.</p>
+            <br>
+            <p>They look for the cheapest path to value.</p>
+            <br>
+            <p>That path often runs through <em>people, processes,</em> and <em>assumptions</em> rather than technology. A tired administrator. A rushed approval. A system that exists because "it always has."</p>
+            <br>
+            <p>Threat modeling is valuable because it pushes defenders to think the same way. It asks where effort is low, oversight is weak, and consequences are high.</p>
+            <br>
+            <p>No checklist can do that on its own.</p>
+            <br>
+            <p>Frameworks, diagrams, and tools are useful. They bring consistency and shared language. They help scale thinking across teams.</p>
+            <br>
+            <p>But they do not create good judgment.</p>
+            <br>
+            <p>Without careful thinking, frameworks become performative. Boxes get checked and risk gets logged, but assumptions remain <em>unchecked.</em></p>
+            <br>
+            <p>Effective threat modeling starts with <strong>curiosity.</strong> It requires the willingness to ask uncomfortable questions and challenge long-standing beliefs about how systems <em>should</em> behave.</p>
+            <br>
+            <p>Structure <em>amplifies</em> thinking. It does not <em>replace</em> it.</p>
+            <br>
+            <p>Threat modeling is not a one-time exercise. It is a habit that becomes a lifestyle.</p>
+            <br>
+            <p>Before frameworks, before templates, before tools, it is a way of seeing systems and asking how they might fail under real-world conditions.</p>
+            <br>
+            <p>In future Field Notes, I will introduce more structure around this way of thinking. Not as a <em>replacement</em> for judgment, but as a way to <em>support</em> it.</p>
+            <br>
+            <p>Frameworks matter.</p>
+            <p>But critical thinking comes first.</p>
+
+        </div>
+        
+        <!-- Essay Footer -->
+        <footer class="essay-footer">
+            <a href="../field-notes.html" class="back-link">Back to Field Notes</a>
+        </footer>
+        
+    </main>
+
+    <!-- Footer -->
+    <footer class="site-footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Matthew P. Jennings</h3>
+                    <p>Cybersecurity Architect, Instructor, and Thought Leader</p>
+                    <div class="social-links" style="margin-top: 20px;">
+                        <a href="https://www.linkedin.com/in/jennings-matthew/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn"><img src="assets/linkedin-icon.png" alt="LinkedIn" style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-top: -2px;"></a>
+                        <a href="https://x.com/TheISArchitect" target="_blank" rel="noopener noreferrer" aria-label="Twitter">𝕏</a>
+                        <a href="https://bsky.app/profile/theisarchitect.bsky.social" target="_blank" rel="noopener noreferrer" aria-label="Bluesky"><img src="assets/bluesky-icon.png" alt="Bluesky" style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-top: -2px;"></a>
+                        <a href="#" target="_blank" rel="noopener noreferrer" aria-label="YouTube"><img src="assets/youtube-icon.png" alt="YouTube" style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-top: -2px;"></a>
+                        <a rel="me" href="https://mastodon.social/@TheISArchitect" target="_blank" rel="noopener noreferrer" aria-label="Mastodon"><img src="assets/mastodon-icon.png" alt="Mastodon" style="width: 18px; height: 18px; display: inline-block; vertical-align: middle; margin-top: -2px;"></a>
+                    </div>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="../index.html#about">About</a></li>
+                        <li><a href="../field-notes.html">Field Notes</a></li>
+                        <li><a href="../index.html#speaking">Speaking Topics</a></li>
+                        <li><a href="../index.html#videos">Videos</a></li>
+                        <li><a href="../index.html#newsletter">Newsletter</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Resources</h3>
+                    <ul>
+                        <li><a href="../blog.html">Blog</a></li>
+                        <li><a href="../resources.html">Free Resources</a></li>
+                        <li><a href="../faq.html">FAQ</a></li>
+                        <li><a href="../privacy.html">Privacy Policy</a></li>
+                        <li><a href="../terms.html">Terms of Service</a></li>
+                    </ul>
+                </div>
+                
+                <div class="footer-section">
+                    <h3>Contact</h3>
+                    <p>Available for speaking engagements, consulting, and training.</p>
+                    <p style="margin-top: 15px;"><a href="../index.html#contact">Get in touch →</a></p>
+                </div>
+            </div>
+            
+            <div class="footer-bottom">
+                <p>&copy; 2025 Matthew P. Jennings. All rights reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="../js/main.js"></script>
+</body>
+</html>
